@@ -1,0 +1,90 @@
+:root {
+  --brand-primary:    #433A96;
+  --brand-accent:     #5B3FA6;
+  --brand-cyan:       #00AEEF;
+  --brand-gradient:   linear-gradient(135deg, #5B3FA6 0%, #00AEEF 100%);
+  --brand-bg:         #EEF4FB;
+  --brand-white:      #FFFFFF;
+  --brand-text:       #1A1A2E;
+  --brand-text-muted: #5A5A7A;
+  --brand-overlay:    rgba(67, 58, 150, 0.93);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: var(--brand-bg);
+  color: var(--brand-text);
+  font-family: 'Inter', -apple-system, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+// Glassmorphism card — light theme
+.card-glass {
+  background: rgba(255, 255, 255, 0.80);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(67, 58, 150, 0.15);
+  border-radius: 20px;
+}
+
+// Global transition on interactive elements
+button, .q-btn, input, .q-field {
+  transition: all 0.2s ease !important;
+}
+
+// Override Quasar table styles for light theme
+.q-table {
+  background: transparent !important;
+  color: var(--brand-text) !important;
+}
+
+.q-table thead th {
+  color: var(--brand-primary) !important;
+  font-weight: 600 !important;
+  background: rgba(67, 58, 150, 0.08) !important;
+  border-bottom-color: rgba(67, 58, 150, 0.15) !important;
+}
+
+.q-table tbody td {
+  color: var(--brand-text) !important;
+  border-bottom-color: rgba(67, 58, 150, 0.08) !important;
+}
+
+.q-table tbody tr:hover td {
+  background: rgba(0, 174, 239, 0.06) !important;
+}
+
+.q-field--outlined .q-field__control {
+  border-color: rgba(67, 58, 150, 0.2) !important;
+  color: var(--brand-text) !important;
+
+  &:hover {
+    border-color: rgba(67, 58, 150, 0.4) !important;
+  }
+}
+
+.q-field__label {
+  color: var(--brand-primary) !important;
+}
+
+// Scrollbar — brand purple
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
